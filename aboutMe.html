@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>about me</title>
+    <textarea></textarea>
+</head>
+<body>
+    <h1>Student information</h1>
+    <script>
+        function showFullName(){
+            let fName = document.getElementById('first_name').value;
+            let lName = document.getElementById('last_name').value;
+            let fullName = fName + " " + lName;
+            document.getElementById('output').innerHTML = fullName;
+        }
+    </script>
+        First Name: <input id="first_name" type="text"/><br/>
+        Last Name: <input id="last_name" type="text"/><br/>
+        <button onclick="showFullName()">Show full name</button>
+        <p id="output">your full name will display hear.......</p>
+
+</body>
+</html>
