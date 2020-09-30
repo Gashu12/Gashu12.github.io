@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>My Home Page</h1>
+    <h2>Gashaw Kassa</h2>
+    <h2>My Assignments</h2>
+
+    <h3>Destructuring Section:</h3>
+    <ol>
+        <li><a href="./destructing.js">destructing Assignment</a></li>
+        <li><a href="./maximal.js">max salary Assignment</a></li>
+    </ol>
+    <h3>Date Section:</h3>
+    <ol>
+    
+        <li><a href="./date.js">date Assginment</a></li>
+        <li><a href="./weekDays.js">week days Assignment</a></li>
+        <li><a href="./europDays.js">europ days Assignment</a></li>
+        <li><a href="./longDateAgo.js">long date Assignment</a></li>
+        <li><a href="./seconds.js">seconds Assignment</a></li>
+    </ol>
+    <h3>Json Section:</h3>
+    <ol>
+    
+        <li><a href="./json.js">json Assignment</a></li>
+    </ol>
+
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+</head>
+
+<body>
+
+    
+
+    <script src="./destructing.js">    </script>
+
+    <script src="./maximal.js"></script>
+
+    <script src="./date.js"></script>
+
+    <script src="./weekDays.js"></script>
+
+    <script src="./europDays.js"></script>
+
+    <script src="./longDateAgo.js"></script>
+
+    <script src="./seconds.js"></script>
+
+    <script src="./json.js"></script>
+
+    <!-- the element with id="mocha" will contain test results -->
+    <div id="mocha"></div>
+
+    <!-- run tests! -->
+    <script>
+        mocha.run();
+    </script>
+
+    show console;
+
+</body>
