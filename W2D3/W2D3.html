@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>My Home Page</h1>
+    <h2>Gashaw Kassa</h2>
+    <h2>My Assignments</h2>
+
+    <h3>map Section:</h3>
+    <ol>
+        <li><a href="./doubleAge.js">double age</a></li>
+        <li><a href="./doubleNumber.js">double numbers</a></li>
+    </ol>
+    <h3>filter Section:</h3>
+    <ol>
+    
+        <li><a href="./filterEven.js">filter all even numbers</a></li>
+        <li><a href="./findAgeGreaterThan10.js">find age greater than 10</a></li>
+        <li><a href="./filterAgeGreaterThan10.js">filter all age greater than 10</a></li>
+        <li><a href="./findEven.js">find even numbers</a></li>
+        
+    </ol>
+    <h3>reduce Section:</h3>
+    <ol>
+    
+        <li><a href="./reducedSum.js">find sum of numbers</a></li>
+        <li><a href="./reducedAverage.js">find average age</a></li>
+        <li><a href="./reducedMax.js">find max of numbers</a></li>
+        <li><a href="./reducedMaxAge.js">find max of age</a></li>
+        <li><a href="./reducedEvenAverageAge.js">find the average age of people with even number ages</a></li>
+        <li><a href="./reducedOddAverageAge.js">find the average age of people with odd number ages</a></li>
+    </ol>
+    <h3>recursion and stack Section:</h3>
+    <ol>
+    
+        <li><a href="./recursionSum.js">Sum all numbers till the given one</a></li>
+        <li><a href="./findFactorial.js">Calculate factorial</a></li>
+        <li><a href="./fabonacciNumbers.js">EC: Fibonacci numbers</a></li>
+        <li><a href="./singleLinkedList.js">Output a single-linked lis</a></li>
+        <li><a href="./reversedLinkedList.js">EC: Output a single-linked list in reverse order</a></li>
+        <li><a href="./recursionTree.js">part II recursion</a></li>
+    
+    </ol>
+
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+</head>
+
+<body>
+
+    
+
+    <script src="./doubleAge.js"></script>
+
+    <script src="./doubleNumber.js"></script>
+
+    <script src="./filterEven.js"></script>
+
+    <script src="./findAgeGreaterThan10.js"></script>
+
+    <script src="./filterAgeGreaterThan10.js"></script>
+
+    <script src="./findEven.js"></script>
+
+    <script src="./reducedSum.js"></script>
+
+    <script src="./reducedAverage.js"></script>
+    <script src="./reducedMax.js"></script>
+    <script src="./reducedMaxAge.js"></script>
+    <script src="./reducedEvenAverageAge.js"></script>
+    <script src="./reducedOddAverageAge.js"></script>
+
+    <script src="./recursionSum.js"></script>
+    <script src="./findFactorial.js"></script>
+    <script src="./fabonacciNumbers.js"></script>
+    <script src="./singleLinkedList.js"></script>
+    <script src="./reversedLinkedList.js"></script>
+    <script src="./recursionTree.js"></script>
+
+    <!-- the element with id="mocha" will contain test results -->
+    <div id="mocha"></div>
+
+    <!-- run tests! -->
+    <script>
+        mocha.run();
+    </script>
+
+    show console;
+
+</body>
