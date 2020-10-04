@@ -45,3 +45,7 @@ class ListNode {
 
 nam.printListValue();
 }
+/*
+let [name1, name2, ...remaining] = ["Julius", "Caesar", "Consul", "of the Roman Republic"];
+console.log(`${remaining[0]} ${remaining[1]}`);
+*/
