@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>My Home Page</h1>
+    <h2>Gashaw Kassa</h2>
+    <h2>My Assignments</h2>
+
+    <h3>closure Section:</h3>
+    <ol>
+        <li><a href="./latestChange.js">Does a function pickup latest changes?</a></li>
+        <li><a href="./variables.js">Which variables are available?</a></li>
+        <li><a href="./counters.js">Are counters independent?</a></li>
+        <li><a href="./variableVisible.js">Counter object</a></li>
+        <li><a href="./functionInIf.js">Function in if</a></li>
+        <li><a href="./inarray.js">Filter through function</a></li>
+        <li><a href="./inbetween.js">Filter through function</a></li>
+        <li><a href="./sumClosure.js">Sum with closures</a></li>
+        <li><a href="./sortBy.js">Sort by field</a></li>
+        <li><a href="./makeArmy.js">Army of functions</a></li>
+    </ol>
+    <h3>EC: function objec NFL Section:</h3>
+    <ol>
+    
+        <li><a href="./counterSetDecrease.js">counter set and decrease function</a></li>
+        
+    </ol>
+    <h3>Draw a lexical environment diagram for the following code:</h3>
+    <ol>
+    
+        <li><a href="./makeArmy func.JPG">LE drawing for makeArmy function</a></li>
+        <li><a href="./modified army.JPG">LE drawing for modified makeArmy function</a></li>
+   
+    </ol>
+   
+
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+</head>
+
+<body>
+
+    
+
+    <script src="./constructor.js"></script>
+
+    <script src="./counters.js"></script>
+
+    <script src="./counterSetDecrease.js\"></script>
+
+    <script src="./functionInIf.js"></script>
+
+    <script src="./inarray.js"></script>
+
+    <script src="./inbetween.js"></script>
+
+    <script src="./latestChange.js"></script>
+
+    <script src="./makeArmy.js"></script>
+    <script src="./sortBy.js"></script>
+    <script src="./variables.js"></script>
+    <script src="./variableVisible.js"></script>
+
+    <!-- the element with id="mocha" will contain test results -->
+    <div id="mocha"></div>
+
+    <!-- run tests! -->
+    <script>
+        mocha.run();
+    </script>
+
+    show console;
+
+</body>
