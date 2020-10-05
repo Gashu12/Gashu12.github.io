@@ -1,5 +1,6 @@
 //////////////////////////////////////////////////////////
 "use strict";
+{
 // Which variables are available?
 
 /**
@@ -23,3 +24,5 @@ function makeWorker() {
   work(); // it will show pete here.
   
   // the variable pete is available.
+
+}

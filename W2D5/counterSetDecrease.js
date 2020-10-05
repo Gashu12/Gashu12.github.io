@@ -1,6 +1,6 @@
 ///////////////////////////////////////////////////////////////////
 "use strict";
-
+{
 /**
  * @returns {number} it returns number
  */
@@ -27,3 +27,4 @@ console.log(counter.decrease());
 console.log(counter.set(100));
 console.log(counter.decrease());
 console.log(counter.decrease());
+}
