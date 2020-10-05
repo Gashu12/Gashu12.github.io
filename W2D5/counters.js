@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////////////
 "use strict";
-
+{
 // Are counters independent?
 
 /**
@@ -27,3 +27,4 @@ function makeCounter() {
   console.log( counter2() ) // ? 1 will show up here.
 
   // yes they are independant because each counters declared their own function.
+}
