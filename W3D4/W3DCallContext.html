@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>My Home Page</h1>
+    <h2>Gashaw Kassa</h2>
+    <h2>Call context Assignments</h2>
+
+    <ol>
+        <li><a href="./fixThisBind.js">fixing with bind method</a></li><br>
+        <li><a href="./fixThisCall.js">fixing with call method</a></li><br>
+        <li><a href="./fixThisApply.js">fixing with apply method</a></li><br>
+        <li><a href="./fixThisWrapper.js">fixing with wrapper method</a></li><br>
+        <li><a href="./parAppLogin.js">Partial application for login</a></li><br>
+        <li><a href="./arrowFunc.js">Arrow functions and lexical ‘this’</a></li><br>
+        <li><a href="./exam2.js">exam 2 questions review</a></li><br>
+    </ol>
+   
+
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+</head>
+
+<body>
+    <script src="./fixThisBind.js"></script>
+    <script src="./fixThisCall.js"></script>
+    <script src="./fixThisApply.js"></script>
+    <script src="./fixThisWrapper.js"></script>
+    <script src="./parAppLogin.js"></script>
+    <script src="./arrowFunc.js"></script>
+    <script src="./exam2.js"></script>
+    <!-- the element with id="mocha" will contain test results -->
+    <div id="mocha"></div>
+
+    <!-- run tests! -->
+    <script>
+        mocha.run();
+    </script>
+
+    show console;
+
+</body>
