@@ -7,38 +7,19 @@ var points1 = 0;    // player 1 points
 var points2 = 0;    // player 2 points
 var size = 3;
 
-<div class="game">
-    <div class="game-title" contenteditable="true">Tic Tac Toe</div>
-    <div class="player" contenteditable="true">
-        Player 1
-        <div style="font-size:30pt;" id="player1" class="selected" contenteditable="true">
-        0
-        </div>
-    </div>
-            
-    <table id="game" class="tictactoe" style="float:left;width:45%;" contenteditable="true">
-    </table>
-            
-    <div class="player" contenteditable="true">
-        Player 2
-        <div id="player2" style="font-size:30pt;" contenteditable="true">0</div>
-    </div>
-            
-    <div class="clear" contenteditable="true"></div>
-</div>
 
 function drawBoard()
 {
-    let parent = document.getElementById("game");
-    let counter = 1;
+    var parent = document.getElementById("game");
+    var counter = 1;
 
-    for (let i = 0; i < 3; i++)
+    for (var i = 0; i < 3; i++)
     {
-        let row = document.createElement("tr");
+        var row = document.createElement("tr");
 
-        for(let x = 0; x < size; x++)
+        for(var x = 0; x < size; x++)
         {
-            let col = document.createElement("td");
+            var col = document.createElement("td");
             col.innerHTML = counter;
 
             row.appendChild(col);
