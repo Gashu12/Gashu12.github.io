@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>My Home Page</h1>
+    <h2>Gashaw Kassa</h2>
+    <h2>My Assignments</h2>
+
+    <h3>Inheritance Assignments:</h3>
+    <ol>
+        <li><a href="./objWithSameConst.js">object with same constructor</a></li>
+        <li><a href="./changingPrototype.js">chaining prototype</a></li>
+        <li><a href="./addMethod.js">Add method f.defer(ms) to functions</a></li>
+        <li><a href="./addDecorating.js">(EC) Add the decorating “defer()” to functions</a></li>
+        <li><a href="./difBnCalls.js">The difference between calls</a></li>
+        <li><a href="./teacher.js">Teacher object</a></li>
+    </ol>
+    
+    <!-- add mocha css, to show results -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
+    <!-- add mocha framework code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
+    <script>
+        mocha.setup('bdd'); // minimal setup
+    </script>
+    <!-- add chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
+    <script>
+        // chai has a lot of stuff, let's make assert global
+        let assert = chai.assert;
+    </script>
+</head>
+
+<body>
+
+    <script src="./objWithSameConst.js"></script>
+
+    <script src="./changingPrototype.js"></script>
+
+    <script src="./addMethod.js"></script>
+
+    <script src="./addDecorating.js"></script>
+
+    <script src="./difBnCalls.js"></script>
+
+    <script src="./teacher.js"></script>
+
+
+    <!-- the element with id="mocha" will contain test results -->
+    <div id="mocha"></div>
+
+    <!-- run tests! -->
+    <script>
+        mocha.run();
+    </script>
+
+    show console;
+
+</body>
