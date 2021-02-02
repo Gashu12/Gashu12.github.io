@@ -1,0 +1,42 @@
+h2 {
+
+    grid-template-areas: initial;
+    background-color: lightseagreen;
+    
+}
+
+h3 {
+
+    grid-template-areas: initial;
+    color: lightseagreen;
+    
+}
+p
+.a {
+    color: lightseagreen;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(26, 211, 180);
+  color: white;
+  text-align: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #2f0e8b;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #c51818;
+  }
