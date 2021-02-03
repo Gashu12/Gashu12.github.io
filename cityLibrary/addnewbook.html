@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/library.js"></script>
+    <script src="js/addnewbook.js"></script>
     <nav class="navbar navbar-expand-md navbar-dark bg-primary">
         <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
             <ul class="navbar-nav mr-auto">
@@ -24,6 +24,7 @@
                     <a class="nav-link" href="virtualTour.html">| virtual</a>
                 </li>
             </ul>
+
         </div>
         <div class="mx-auto order-0">
             <a class="navbar-brand mx-auto" href="#">Welcome, Guest</a>
@@ -39,9 +40,21 @@
 <body>
     <div class="container">
     <h3>New Book Form</h3>
-    <p id="form">
+    <p><b>Note:</b> from filds marked with astriks(*) are required</p>
+    *Book title<br><input id="bookTitle" size="150" value="" required></input>
+    *ISBN<br><input id="isbn" size="70" value="" required></input><br>
+    *publisher<br><input id="publisher" size="70" value="" required></input><br>
+    *over due Fee per day<br><input id="overDueFee" size="70" value="0.00" required></input><br>
+    <p>Enter a valid decimal amount; in dollars and cents; no comma (e.g. 1.99)</p>
+    *date published<br><input id="publishedDate" size="70" value="yyyy-mm-dd" required></input>
+    
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button class="btn btn-secondary me-md-2" type="button">Reset</button>
+        <button id="save" class="btn btn-primary" type="button">Save book</button>
+      </div>
     <div class="footer">
         <p style="text-align: left;">Gashaw Kassa ::: CS418 DBSD <span style="float: right;">&copy; January 2021</span></p>
-      </div>
+    </div>
+    
 </body>
 </html>

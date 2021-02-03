@@ -11,6 +11,8 @@ window.onload = libraryApp
 function libraryApp(){
 
     fetchBooklists()
+    let btn = document.getElementsByClassName("btn btn-secondary")
+    btn.addEventListener("click", addBooks)
 
 }
 
@@ -28,22 +30,21 @@ async function fetchBooklists(){
             output.innerHTML += "<td>" + +(count+i) + "</td>"
         + "<td>" + res[i].isbn + "</td>" + "<td>" + res[i].title + "</td>" +
         "<td>" + res[i].overdueFee + "</td>" + "<td>" + res[i].publisher + "</td>" +
-        "<td>" + res[i].datePublished + "</td>"
+        "<td>" + res[i].datePublished + "</td>" + "<td>" + "<a href=''>Edit</a>" + "</td>" +
+        "<td>" + "<a id='delete' href='deletRow(this)'>Delete</a>" + "</td>"
         }
     } catch (err) {console.log(err)}
 
+  /*   document.getElementById('delete').addEventListener("click", deletRow)
+    
+    function deletRow(r){
+        var i = r.parentNode.parentNode.rowIndex;
+        document.getElementById("myTable").deleteRow(i);
+    } */
 
 }
 
-/* async function addBooks(){
-    try{
-        let addedForm = await fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/add",{
-            method: "POST"
-        })
-        let form = await addedForm.text()
-        let outputForm = document.getElementById("form")
-        outputForm.innerHTML = form;
-    } catch (err) {console.log(err)}
-} */
+
+
 
 
