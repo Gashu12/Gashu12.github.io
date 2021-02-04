@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+        <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./index.html">The CityLibrary<span class="sup">&reg;</span> ::: a CS418 WebApp Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html" >| About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="books.html">| book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="virtualTour.html">| virtual</a>
+                </li>
+            </ul>
+
+        </div>
+        <div class="mx-auto order-0">
+            <a class="navbar-brand mx-auto" href="#">Welcome, Guest</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+ 
+        </div>
+    </nav>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container">
+        <h3>Edit Book Form</h3>
+        <p><b>Note:</b> from filds marked with astriks(*) are required</p>
+        *Book title<br><input id="bookTitle" size="150" value="" required></input>
+        *ISBN<br><input id="isbn" size="70" value="" required></input><br>
+        *publisher<br><input id="publisher" size="70" value="" required></input><br>
+        *over due Fee per day<br><input id="overDueFee" size="70" value="0.00" required></input><br>
+        <p>Enter a valid decimal amount; in dollars and cents; no comma (e.g. 1.99)</p>
+        *date published<br><input id="publishedDate" size="70" value="yyyy-mm-dd" required></input>
+    
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button id="edit" class="btn btn-primary" type="button">update</button>
+        
+      </div>
+    <div class="footer">
+        <p style="text-align: left;">Gashaw Kassa ::: CS418 DBSD <span style="float: right;">&copy; January 2021</span></p>
+    </div>
+
+    <script>
+
+        let target = window.location.search.split("=")[1]
+       
+        fetch('https://elibraryrestapi.herokuapp.com/elibrary/api/book/list')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+ 
+                data.forEach(obj => {
+                    if (target == obj.bookId) {
+                
+                        document.getElementById("isbn").value = obj.isbn
+                        document.getElementById("bookTitle").value = obj.title
+                        document.getElementById("overDueFee").value = obj.overdueFee
+                        document.getElementById("publisher").value = obj.publisher
+                        document.getElementById("publishedDate").value = obj.datePublished
+ 
+                    }
+                });
+            })
+            
+    function Edit() {
+
+        fetch(`https://elibraryrestapi.herokuapp.com/elibrary/api/book/update/${target}`, {
+            method:"PUT",
+            headers: {
+            "Content-Type":"application/json"
+            },
+            body: JSON.stringify({
+            "isbn": document.getElementById("isbn").value+"",
+            "title": document.getElementById("bookTitle").value+"",
+            "overdueFee": document.getElementById("overDueFee").value,
+            "publisher": document.getElementById("publisher").value+"",
+            "datePublished": document.getElementById("publishedDate").value+""
+
+            })
+
+        }).catch(console.log)
+        
+
+    alert("Successfully updated")
+    
+    
+
+    }
+
+    let btn = document.querySelector("#edit")
+
+    btn.addEventListener("click", Edit)
+    </script>
+    
+</body>
+</html>

@@ -2,7 +2,8 @@
 window.onload = addingBookApp
 
 function addingBookApp(){
-
+    
+    document.getElementById("reset").addEventListener("click", reset)
     document.getElementById("save").addEventListener("click", save)
     function save(){
    
@@ -29,6 +30,23 @@ function addingBookApp(){
 
         });
 
+        
+            alert("successfully added!")
+
     }
 
+    function reset(){
+
+        document.getElementById("isbn").value = "";
+        document.getElementById("bookTitle").value = "";
+        document.getElementById("publisher").value = "";
+        document.getElementById("overDueFee").value = "0.00";
+        document.getElementById("publishedDate").value = "yyyy/mm/dd"
+     
+     }
+
 }
+
+
+
+

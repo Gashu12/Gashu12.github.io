@@ -27,20 +27,24 @@ async function fetchBooklists(){
         let output = document.getElementById("booksTable")
         for(let i = 0; i <= res.length; i++){
             let count = 1
-            output.innerHTML += "<td>" + +(count+i) + "</td>"
+            output.innerHTML += '<table id="booksTable">' + "<td>" + +(count+i) + "</td>"
         + "<td>" + res[i].isbn + "</td>" + "<td>" + res[i].title + "</td>" +
         "<td>" + res[i].overdueFee + "</td>" + "<td>" + res[i].publisher + "</td>" +
-        "<td>" + res[i].datePublished + "</td>" + "<td>" + "<a href=''>Edit</a>" + "</td>" +
-        "<td>" + "<a id='delete' href='deletRow(this)'>Delete</a>" + "</td>"
+        "<td>" + res[i].datePublished + "</td>" + "<td>" + `<a href='editBook.html?bookid=${res[i].bookId}'>Edit</a>` + "</td>" +
+        "<td>" + "<a id='delete' onclick='deleteRow()' href='deletRow(this)'>Delete</a>" + "</td>" + '</table>'
         }
+       /*  temp += "<td>" + `<a href="Edit.html?bookid=${element.bookId}">Edit</a>` + "</td>"
+        temp += "<td>" + `<a href="delete.html?bookid=${element.bookId}">Delete</a>` + "</td>" */
     } catch (err) {console.log(err)}
 
-  /*   document.getElementById('delete').addEventListener("click", deletRow)
     
-    function deletRow(r){
-        var i = r.parentNode.parentNode.rowIndex;
-        document.getElementById("myTable").deleteRow(i);
-    } */
+    function deletRow(bookId){
+        var i = bookId.parentNode.parentNode.rowIndex;
+        document.getElementById("booksTable").deleteRow(i);
+        fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/delete/{res.bookId}", {
+            method: "DELETE"
+        })
+    }
 
 }
 
